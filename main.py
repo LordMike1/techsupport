@@ -1,5 +1,6 @@
 import discord
 import os
+from keep_alive import keep_alive
 
 client = discord.Client()
 
@@ -18,4 +19,5 @@ async def on_message(message):
     if message.content.startswith('?ip'):
         await message.channel.send('To join the server use this IP:\n`jonahwill.org`')
 
+keep_alive()
 client.run(os.getenv('TOKEN'))
