@@ -22,5 +22,8 @@ async def on_message(message):
     if message.content.startswith('?help'):
         await message.channel.send('The current commands you can use are:\n\n`?cantjoin` - Displays common troubleshooting steps for issues when joining the server.\n`?ip` - Displays the main server IP.')
 
+    if message.content.startswith('?melon'):
+        await message.channel.send("Systemax sometimes reacts with or sends a watermelon.\n\nDon't ask about it, just go with it.\n\nLong live :watermelon:.")
+
 keep_alive()
 client.run(os.getenv('TOKEN'))
